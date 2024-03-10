@@ -101,7 +101,7 @@ main{
 
 .poke-tous{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -151,7 +151,7 @@ main{
 .nom-container{
    display: flex;
    align-items: center;
-   gap: 2rem;
+   gap: .5rem;
    flex-wrap: wrap;
    justify-content: center;
 }
@@ -178,6 +178,25 @@ main{
     flex-wrap: wrap;
 }
 
+.type{
+    padding:.25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.poke-stats{
+    display: flex;
+    gap:.5rem;
+    font-size:.85rem;
+    font-weight: 500;
+    
+}
+
+.stats{
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
 /* coleur de button selon le type */
 
 .normal {
@@ -198,6 +217,7 @@ main{
 .grass {
     background-color: var(--type-grass);
     color: var(--clr-black);
+    
 }
 
 .electric {
@@ -268,4 +288,64 @@ main{
 .fairy {
     background-color: var(--type-fairy);
     color: var(--clr-black);
+}
+
+/* button up */
+
+.btn-up{
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-gray);
+    padding: .5rem;
+    border-radius: 70%;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0, 0, 0,.25);
+    transition: all .3s ease-in-out;
+    outline: 0;
+    border: 1px solid royalblue;
+    position: fixed;
+    right: 20px;
+    left: 80%;
+    bottom: 80px;
+}
+
+.btn-up img{
+    width: 2.5rem;
+}
+
+.btn-up:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0,.25);
+    
+}
+
+
+
+
+/* reglages mobile */
+
+@media screen and (min-width: 470px) {
+    .poke-tous {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-up{
+        width: 4.5rem;
+    }
+
+    .btn-up img{
+        width: 3.5rem;
+    }    
+}
+
+@media screen and (min-width: 700px) {
+    .poke-tous {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .btn-up{
+        left: 89%;
+    }
 }
